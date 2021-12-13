@@ -13,7 +13,11 @@ export default function Profile() {
 
       {/* Avatar */}
       <div className="relative shadow mx-auto h-36 w-36 -my-12 border-white rounded-full overflow-hidden border-4">
-        <img className="object-fill w-full h-full" src={avatar} alt="avatar" />
+        <img
+          className="object-fill w-full h-full"
+          src="https://e7.pngegg.com/pngimages/418/1/png-clipart-laughing-man-ghost-in-the-shell-logo-animated-film-smiling-man-text-trademark-thumbnail.png"
+          alt="avatar"
+        />
       </div>
       {/* End Avatar */}
       <div className="mt-16">
