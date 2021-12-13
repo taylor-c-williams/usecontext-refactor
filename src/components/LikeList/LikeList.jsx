@@ -1,6 +1,9 @@
 import Like from './Like'
+import { useUser } from '../../context/UserContext'
 
-export default function LikeList({ likes }) {
+export default function LikeList() {
+  const { user } = useUser({})
+  const { likes } = user
   return (
     <>
       <h2 className="text-center text-xl">Interests</h2>
