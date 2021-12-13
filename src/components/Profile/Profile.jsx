@@ -1,7 +1,10 @@
 import LikeList from '../LikeList/LikeList'
+import { useUser } from '../../context/UserContext'
 
-export default function Profile({ user }) {
-  const { name, avatar, likes, motto, color, header } = user
+export default function Profile() {
+  const { user } = useUser({})
+  const { name, avatar, motto, color, header } = user
+
   return (
     <div className="bg-gray-100 bg-opacity-95 my-12 pb-6 w-full justify-center items-center overflow-hidden md:max-w-sm rounded-lg shadow-sm mx-auto">
       <div className="relative h-40">
@@ -10,7 +13,11 @@ export default function Profile({ user }) {
 
       {/* Avatar */}
       <div className="relative shadow mx-auto h-36 w-36 -my-12 border-white rounded-full overflow-hidden border-4">
-        <img className="object-fill w-full h-full" src={avatar} alt="avatar" />
+        <img
+          className="object-fill w-full h-full"
+          src="https://e7.pngegg.com/pngimages/418/1/png-clipart-laughing-man-ghost-in-the-shell-logo-animated-film-smiling-man-text-trademark-thumbnail.png"
+          alt="avatar"
+        />
       </div>
       {/* End Avatar */}
       <div className="mt-16">
@@ -23,7 +30,7 @@ export default function Profile({ user }) {
           </span>
         </p>
       </div>
-      <LikeList likes={likes} name={name} />
+      <LikeList />
     </div>
   )
 }
